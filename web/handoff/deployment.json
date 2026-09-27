@@ -1,0 +1,51 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-309-eventcheckin",
+  "version": 1,
+  "launchId": "77597ed4-466f-47a9-8daa-d6fd57c5d276",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Sepolia test toy; attendance records are not tickets or credentials. LaunchToken has no constructor arguments. EventCheckin stores the deployed CHKN address immutably, starts unfunded, and needs no initialization calls. Its EIP-712 name EventCheckin and version 1 are source literals. There is no global owner, admin, pause or upgrade path. Funders approve CHKN and call fundEvent; they trust each event's organiser to authorise attendees and reclaim unspent funds. Rewards and reclaimed funds are withdrawn by their credited recipients. The pool pairs with native ETH and has no hook. Services resolve policy and signed artifact linkage, including any policy-derived effective opening price.",
+    "token": {
+      "name": "Checkin",
+      "symbol": "CHKN",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "EventCheckin",
+        "constructorArgs": [
+          "$token"
+        ]
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0xbbf6f6be48df07a25ebf9c4df68a18c321bba743da3df48e8257d3cb3fed6aed",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0xd758416845f173467513389797c41e800a8e15ec",
+      "blockNumber": 11791650,
+      "creationCodeHash": "75890eaf2d2dec44afcad94c249979e4c2c72271502e9c942307a48c62df50dc"
+    },
+    {
+      "name": "EventCheckin",
+      "txHash": "0xbbf6f6be48df07a25ebf9c4df68a18c321bba743da3df48e8257d3cb3fed6aed",
+      "abiHash": "8e5c9a578c6d527451acdc2c6085a27c4d6101ecd923dddf6c23bb94bdc599a4",
+      "address": "0xcbcc69828a4916362a3fbf1df2e6115eb27ee2e4",
+      "blockNumber": 11791650,
+      "creationCodeHash": "0f561385a630d6972ca28a8278699682e3ff59f97998749c7229752d7d14d6fb"
+    }
+  ],
+  "sourceCommit": "4b6f1d8482038bf9cf27e8bd9142a542adbdad4c",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "31e96f67780c6e3fef2e0f1dce7208d9038ee7c46dd090e1227b3a84e6608395"
+}
